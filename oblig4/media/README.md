@@ -4,9 +4,6 @@
 - best_set.png shows the grapth of settelingtime with tuned values
 - bilde1.png
 - bilde2.png
-- graf.png
-- rot1.png
-- rot2.png
-- tegning.jpg
-- tegning2.jpg
-- tegning3.jpg
+- graf.png shows the grapth for settelingtime for tuned values with PD control 
+- rot1.png and rot2.png shows the robot rotating around it's own axis (here i misunderstood the assignment)
+- tegning.jpg , tegning2.jpg and tegning3.jpg shows control systems in block diagrams
