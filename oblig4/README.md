@@ -57,6 +57,14 @@ This was not the intended Cartesian drawing trajectory and did not constitute a 
 
 The source code for this final attempt has not yet been located. The approach is described in the report.
 
+### Optional Extension — Drawing with the Physical Robot
+
+After the mandatory work, I participated in an optional practical exercise using the physical CrustCrawler to draw a circle with a marker.
+
+The exercise involved substantial guidance and assistance. It provided hands-on experience with executing a drawing trajectory on the robot, but should not be interpreted as an independently implemented solution to the mandatory trajectory-planning task.
+
+Videos are available in the [media folder](media/). The source code associated with this demonstration has not yet been located and is not included in the repository.
+
 ## Files and Media
 
 - [Taskdescription.pdf](Taskdescription.pdf) — Assignment brief and original setup instructions
