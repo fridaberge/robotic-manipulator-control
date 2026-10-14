@@ -1,5 +1,7 @@
-what was dificult?
-- It was hard to chech for errors in the output for some of the functions in task 2
+### Open PDF file oblig2 for my assignment. Open Taskdescription for tasks.
+
+#### What was dificult?
+- It was hard to check for errors in the output for some of the functions in task 2
 - I found it hard to explain task 2c)
 
 what was easy?
