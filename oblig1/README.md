@@ -1,6 +1,6 @@
 ### Open PDF file called oblig1 to see my assignment. The taskdescription.pdf file shows the task.
 
-### what was dificult, what was easy, was there anything you could have done better?
+### What was dificult, what was easy, was there anything you could have done better?
 
 - I liked the assignment
 - I am glad i did the assignment i Latex beacause i tried to calculate the matrixes by hand first, and it took up all the page. And it was a mess
