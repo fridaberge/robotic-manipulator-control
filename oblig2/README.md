@@ -1,13 +1,92 @@
-### Open the PDF to see my assignment. Open taskdescription for the tasks
+# Assignment 2 — Numerical Kinematics and Jacobian Analysis
 
-### Short reflection on the assignment; 
+Individual coursework completed for **IN3140 – Introduction to Robotics** at the University of Oslo, spring 2024.
 
-#### What was difficult?
-- It took me a while to solve task 1b) with the inverse-function. And since i got theta2 wrong in the first assignment i got the answer from an other student to implement in the function. I spent most time on this task
+This assignment builds on Assignment 1 by implementing kinematic calculations in Python and analysing the simplified 3DOF CrustCrawler manipulator using its Jacobian.
 
-#### What was easy?
-- In task 1a and task 2 I felt like I had control and I got I got it done fast
+## Objectives
 
-#### Was there anything you could have done better?
-- I could for task 1c have made the test more complex, could have included more input and could for example have tested for more edge-cases
-- I could also have excluded some of the solution to the inverse kinematics in the cases where there are less than four solution
+- Implement forward and inverse kinematics.
+- Check consistency between the two implementations.
+- Calculate alternative joint configurations for a target position.
+- Derive the Jacobian and investigate singular configurations.
+- Calculate Cartesian end-effector velocity from joint velocities.
+
+## Work Completed
+
+### Forward and Inverse Kinematics
+
+Implemented Python functions that map:
+- Joint angles to end-effector position
+- End-effector position to possible joint configurations
+
+The inverse-kinematics implementation incorporated a correction to the derivation from Assignment 1.
+
+### Consistency Checks
+
+Used the forward- and inverse-kinematics functions together to check whether calculated joint configurations reproduced the target position.
+
+Also worked with the specified target position to calculate alternative joint-angle solutions.
+
+### Jacobian Derivation
+
+Derived the geometric Jacobian using the joint axes and origins obtained from the homogeneous transformations.
+
+The report includes both the linear-velocity and angular-velocity components.
+
+### Singularity Analysis
+
+Investigated singular configurations using the determinant of the translational Jacobian.
+
+Discussed and illustrated configurations involving:
+- Collinear arm links
+- An end-effector position on the base rotation axis
+- Axis alignment in a spherical wrist
+
+### End-Effector Velocity
+
+Implemented a Python function for calculating Cartesian end-effector velocity from joint angles and joint velocities.
+
+## Files and Media
+
+- [Taskdescription.pdf](Taskdescription.pdf) — Assignment brief
+- The submitted PDF report — Derivations, illustrations and explanations
+- Python scripts — Kinematics, consistency checks and velocity calculations
+- [media/](media/) — Supporting illustrations and results
+
+The report identifies the scripts associated with each task.
+
+## Contribution
+
+The assignment was completed individually.
+
+As noted in my original reflection, I received a corrected inverse-kinematics expression from a fellow student and implemented it in Python.
+
+## Reflection
+
+Translating the analytical expressions into Python made it easier to inspect results and compare forward and inverse calculations.
+
+An important lesson was that testing a few configurations is not enough to establish correctness across the entire workspace.
+
+The implementation would benefit from more extensive testing of boundary positions, unreachable targets and cases with fewer distinct solutions.
+
+## Limitations and Improvements
+
+The submitted work is coursework rather than a fully tested kinematics library.
+
+Further improvements would include:
+- Automated tests covering a wider range of configurations
+- Explicit handling of unreachable target positions
+- Detection and removal of duplicate solutions
+- Consistent documentation of angle and distance units
+- Review of the singularity explanations in the report
+
+## Running the Code
+
+The Python scripts can be inspected and run separately. Check their imports and input conventions before execution.
+
+A tested dependency list and unified execution procedure have not yet been documented.
+
+ROS and Gazebo are not required for the calculations in this assignment.
+
+[Back to project overview](../README.md)
