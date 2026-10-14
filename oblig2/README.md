@@ -1,4 +1,4 @@
-### Open the PDF to see assignment
+### Open the PDF to see my assignment. Open taskdescription for the tasks
 
 ### Short reflection on the assignment; 
 
