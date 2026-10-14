@@ -1,15 +1,104 @@
-#### Kva var vanskeleg?
- - Eg meiner at alle oppgåvane var litt vanskelege utanom opg 2
- - Eg slet mykje med å få til tuning i dei siste to oppgåvane
- - I oppgåve 4 fikk eg nokon verdiar, men dei ga ikkje mykje mening da eg la dei inn i rqt
- - Oppgåve 5 var det litt dårleg veiledning på
+# Assignment 4 — Feedback Control and ROS/Gazebo Simulation
 
-#### Kva var enkelt?
-- Oppgåve 2 var grei
-- Tegneoppgåvane var enkle fordi eg fann liknande tegningar
+Individual coursework completed for **IN3140 – Introduction to Robotics** at the University of Oslo, spring 2024.
 
-#### Kva kunne eg ha gjort betre?
-- Eg er usikker på om eg gjorde riktig i første oppgåve der eg fulgte oppsrifta som låg ute
-for det stod at eg skulle gjenbruke forward kinematics, og eg var usikker på om det var frå oblig 3 eller 1,
-men eg valte innlevering 3, som er årsaka til at eg fekk I_zz og ikkje I_yy som eg la merke til at andre studentar hadde fått
-- Eg kunne også ha fordelt obligen over flere dagar med arbeid, men eg hadde ikkje so mukje tid denne gonga
+This assignment investigates feedback control of the CrustCrawler manipulator, focusing on Joint 2 and using the provided ROS/Gazebo simulation environment.
+
+## Objectives
+
+- Develop a simplified single-joint model.
+- Analyse the control system in the Laplace domain.
+- Construct closed-loop block diagrams.
+- Implement and tune feedback controllers.
+- Inspect step responses and steady-state error.
+- Explore circular robot motion.
+
+## Work Completed
+
+### Single-Joint Model and Control Analysis
+
+Worked with a simplified model of Joint 2 using energy-based calculations.
+
+The report includes:
+- A single-joint equation of motion
+- Laplace-domain analysis
+- Closed-loop block diagrams
+- PD gain calculations based on desired response characteristics
+
+### Simulation Setup
+
+Configured the provided course packages and launched the CrustCrawler simulation in Gazebo.
+
+The setup used the University of Oslo IFI ROS environment.
+
+### PD Control
+
+Implemented a PD controller in the provided starter code and investigated its response through simulation plots.
+
+Experimented with proportional and derivative gains and discussed settling time and steady-state error.
+
+The gains used in the simulation differed from those calculated in the analytical section. These results therefore require further review before making quantitative performance claims.
+
+### PID and PI Control
+
+Implemented a PID option to account for accumulated error.
+
+Also implemented a PI controller and investigated experimental tuning using the method described in the assignment.
+
+The report documents the tuning attempts, but the calculations and controller-parameter choices need further verification.
+
+### Circular-Motion Attempt
+
+The final task asked for a trajectory generator that would make the robot draw a circle with a marker.
+
+I interpreted this differently and modified the simulation configuration to allow the robot to rotate around its base axis. With an adjusted arm position, this produced circular motion around the robot.
+
+This was not the intended Cartesian drawing trajectory and did not constitute a completed implementation of the requested trajectory generator.
+
+The source code for this final attempt has not yet been located. The approach is described in the report.
+
+## Files and Media
+
+- [Taskdescription.pdf](Taskdescription.pdf) — Assignment brief and original setup instructions
+- [IN3140_oblig4_fridatbe.pdf](IN3140_oblig4_fridatbe.pdf) — Submitted report
+- Controller source files — Implementations based on the provided starter code
+- [media/](media/) — Plots, simulation images and demonstrations
+
+## Contribution
+
+The assignment was completed individually using provided starter code and course simulation packages.
+
+My work included modelling, control analysis, controller implementation, tuning experiments and written documentation.
+
+## Reflection
+
+This assignment connected the theoretical control calculations with observable robot behaviour in simulation.
+
+The main challenges were selecting an appropriate model, choosing controller gains and interpreting the resulting responses.
+
+The circular-motion task also demonstrated the importance of clarifying the intended trajectory before implementing a solution.
+
+## Limitations and Improvements
+
+The submitted controllers and measurements are retained as coursework, not as validated control software.
+
+Further improvements would include:
+- Reviewing the model parameters and their units
+- Reconciling calculated gains with those used in simulation
+- Measuring response characteristics more systematically
+- Verifying the PI tuning calculations
+- Comparing PD, PI and PID under consistent test conditions
+- Recovering or reimplementing the intended trajectory generator
+- Documenting a reproducible simulation setup
+
+## Running the Simulation
+
+The original setup depends on the course's ROS 1 environment, CrustCrawler packages and Gazebo.
+
+See [Taskdescription.pdf](Taskdescription.pdf) for the original workspace and launch instructions.
+
+Those instructions refer to course-specific resources and an older environment. They have not been verified as a working installation procedure outside the IFI setup.
+
+The exact ROS distribution and Gazebo version have not yet been confirmed.
+
+[Back to project overview](../README.md)
