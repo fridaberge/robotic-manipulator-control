@@ -1,4 +1,4 @@
-Open PDF file to see the assignment
+Open PDF file called oblig1 to see the assignment, The taskdescription.pdf file shows the assignment
 
 what was dificult, what was easy, was there anything you could have done better?
 
