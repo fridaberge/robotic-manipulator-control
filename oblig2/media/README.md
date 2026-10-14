@@ -1,3 +1,3 @@
 # Project Media
 
-Images of the CrustCrawler robot 
+Illustrations of the CrustCrawler robot 
