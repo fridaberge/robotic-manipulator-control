@@ -11,5 +11,5 @@ the expressians shorter. It got a bit messy, so next time i will probably use th
 
 
 Notes from after submission:
-- The formula for for ax^2+bx+c given in the formula sheet by the university was wrong so my inverse kinematics turned out to be wrong (this is changed in oblig2/assignment2)
-- I was wrong about the different configurations
+- The inverse kinematics seemed to have some mistae
+- I was wrong about the different configurations within the workspace. I sasid there are only two sets of angles for a given point, but there are four (elbow up and down and thetha0 rotated 180 degrees)
