@@ -21,7 +21,7 @@ The work is divided into four mandatory assignments:
 
 In the first assignment, I established coordinate frames for a 3DOF CrustCrawler robotic arm and derived the forward and inverse kinematics.
 
-This included describing the robot geometry, defining transformations between coordinate frames and calculating joint configurations for desired end-effector positions.
+This included describing the robot geometry, defining transformations between coordinate frames with the denavit hartenberg method and calculating joint configurations for desired end-effector positions.
 
 ### Assignment 2: Numerical Kinematics and Jacobian
 
@@ -39,7 +39,7 @@ This part focused on understanding how the robot's motion is affected by its phy
 
 In the fourth assignment, I worked with control theory for the robotic manipulator, including PD and PID control.
 
-The robot was simulated using ROS 1 and Gazebo. I created closed-loop block diagrams, analysed the robot motion through plots and tuned the PID controller to improve the motion.
+The robot was simulated using ROS and Gazebo. I created closed-loop block diagrams, analysed the robot motion through plots and tuned the PID controller to improve the motion.
 
 The final part of the assignment involved trajectory planning, where the manipulator was intended to draw a circular trajectory with a marker. The implemented result produced a circular motion, although the motion was somewhat uneven and the trajectory interpretation differed from the intended task.
 
@@ -58,7 +58,7 @@ The project resulted in:
 - Jacobian derivation and numerical evaluation
 - Lagrangian-based dynamic model
 - PD and PID controller implementation
-- ROS 1/Gazebo simulation of manipulator motion
+- ROS/Gazebo simulation of manipulator motion
 - PID tuning and motion analysis using plots
 - Initial trajectory planning for circular motion
 
