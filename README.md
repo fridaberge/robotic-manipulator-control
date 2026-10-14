@@ -1,75 +1,152 @@
 # CrustCrawler Robotic Manipulator Control
 
-This repository contains my individual mandatory assignments from **IN3140 – Introduction to Robotics** at the University of Oslo.
+Robotics coursework covering coordinate transformations, kinematics, dynamic modelling and feedback control of a simplified three-degree-of-freedom (3DOF) CrustCrawler manipulator.
 
-The project focuses on modelling and controlling a 3DOF CrustCrawler robotic manipulator, starting from coordinate frames and kinematics, and progressing toward dynamics, control theory, simulation and trajectory planning.
+This repository contains four individual assignments completed in **IN3140 – Introduction to Robotics** at the **University of Oslo in spring 2024**.
 
-## Technologies
+The work combines mathematical derivations, Python implementations and ROS/Gazebo simulation. The coursework also included experience with a physical CrustCrawler robot.
+
+## Technologies and Methods
 
 - Python
-- ROS
-- Gazebo
+- SymPy
+- ROS 1 and Gazebo
 - LaTeX
-- PID control
-- Robotic kinematics and dynamics
+- Denavit–Hartenberg modelling
+- Forward and inverse kinematics
+- Jacobian and singularity analysis
+- Euler–Lagrange dynamics
+- PD, PI and PID control
 
-## Project Overview
+## Assignment Overview
 
-The work is divided into four mandatory assignments:
+### Assignment 1 — Coordinate Transformations and Kinematics
 
-### Assignment 1: Kinematics
+Established coordinate frames and derived kinematic relationships for a simplified 3DOF model of the CrustCrawler.
 
-In the first assignment, I established coordinate frames for a 3DOF CrustCrawler robotic arm and derived the forward and inverse kinematics.
+The work included:
+- Transformations between world, base and task coordinate frames
+- Workspace illustrations
+- Denavit–Hartenberg parameters and homogeneous transformations
+- Forward kinematics and end-effector position calculations
+- Analytical inverse kinematics
+- Discussion of alternative joint configurations
 
-This included describing the robot geometry, defining transformations between coordinate frames with the denavit hartenberg method and calculating joint configurations for desired end-effector positions.
+The original submission contains errors in the inverse-kinematics derivation and discussion of solution counts. These are acknowledged in the assignment README, and the inverse-kinematics work was revised in Assignment 2.
 
-### Assignment 2: Numerical Kinematics and Jacobian
+[Assignment files and reflection](oblig1/) · [Task description](oblig1/Taskdescription.pdf) · [Media](oblig1/media/)
 
-In the second assignment, I implemented the kinematic calculations from Assignment 1 in Python.
+### Assignment 2 — Python Implementation and Jacobian Analysis
 
-I also derived and implemented the Jacobian matrix for the manipulator, allowing the relationship between joint velocities and end-effector velocity to be analysed numerically for given joint angles.
+Implemented the kinematic calculations in Python and investigated the relationship between joint motion and end-effector motion.
 
-### Assignment 3: Dynamics
+The work included:
+- Forward- and inverse-kinematics functions
+- Consistency checks between the two functions
+- Calculation of alternative joint configurations for a target position
+- Derivation of the geometric Jacobian
+- Analysis and illustration of singular configurations
+- A function mapping joint velocities to Cartesian end-effector velocity
 
-In the third assignment, I derived the Lagrangian formulation and dynamic model for the manipulator.
+The reflection identifies opportunities for more extensive edge-case testing and better handling of positions with fewer distinct inverse-kinematics solutions.
 
-This part focused on understanding how the robot's motion is affected by its physical parameters, joint variables and dynamic equations.
+[Assignment files and reflection](oblig2/) · [Task description](oblig2/Taskdescription.pdf) · [Media](oblig2/media/)
 
-### Assignment 4: Control and Simulation
+### Assignment 3 — Dynamic Modelling
 
-In the fourth assignment, I worked with control theory for the robotic manipulator, including PD and PID control.
+Worked with energy-based modelling and equations of motion, progressing from a simplified two-link model to a computational three-link model.
 
-The robot was simulated using ROS and Gazebo. I created closed-loop block diagrams, analysed the robot motion through plots and tuned the PID controller to improve the motion.
+The work included:
+- An Euler–Lagrange derivation for a vertically moving particle
+- Potential and kinetic energy calculations
+- A Lagrangian and equations of motion for a two-link manipulator
+- Symbolic Python calculations for the three-link model
+- Implementation work on inertia, Coriolis/centrifugal and gravitational terms
+- Assembly of the joint-torque expression
 
-The final part of the assignment involved trajectory planning, where the manipulator was intended to draw a circular trajectory with a marker. The implemented result produced a circular motion, although the motion was somewhat uneven and the trajectory interpretation differed from the intended task.
+The submitted three-link implementation is retained as coursework and should not be treated as a validated dynamics model.
+
+[Assignment files and reflection](oblig3/) · [Task description](oblig3/Taskdescription.pdf) · [Media](oblig3/media/)
+
+### Assignment 4 — Feedback Control and ROS/Gazebo Simulation
+
+Investigated feedback control of Joint 2 using a simplified single-joint model and the provided simulation environment.
+
+The work included:
+- Single-joint dynamic modelling
+- Laplace-domain analysis and closed-loop block diagrams
+- PD gain calculations based on desired response characteristics
+- PD implementation and experimental tuning
+- Step-response plots and discussion of steady-state error
+- PID implementation as a possible improvement
+- PI implementation and experimental tuning
+
+The final task asked for a ROS trajectory generator that would make the robot draw a circle. My submitted approach instead modified the simulation configuration to allow rotation around the robot's base axis. This produced circular motion but did not implement the intended Cartesian drawing trajectory.
+
+The source code for the final circular-motion attempt has not yet been located. The report documents the approach taken.
+
+[Assignment files and reflection](oblig4/) · [Task description](oblig4/Taskdescription.pdf) · [Media](oblig4/media/)
 
 ## My Contribution
 
-All assignments were completed individually.
+All four assignments were completed individually.
 
-I implemented the mathematical derivations, Python calculations, control logic and simulation work myself, with the exception of some provided starter code for the final assignment.
+My work included mathematical derivations, Python programming, written reports, controller implementation and simulation experiments.
 
-## Results
+The control assignment used provided starter code and course simulation packages. As documented in the Assignment 2 reflection, I received a corrected inverse-kinematics expression from a fellow student and implemented it in Python.
 
-The project resulted in:
+## Repository Guide
 
-- Forward and inverse kinematics for a 3DOF CrustCrawler manipulator
-- Python implementation of kinematic calculations
-- Jacobian derivation and numerical evaluation
-- Lagrangian-based dynamic model
-- PD and PID controller implementation
-- ROS/Gazebo simulation of manipulator motion
-- PID tuning and motion analysis using plots
-- Initial trajectory planning for circular motion
+- `oblig1/` — Coordinate transformations and analytical kinematics
+- `oblig2/` — Python kinematics, Jacobian and singularity analysis
+- `oblig3/` — Dynamic modelling and symbolic calculations
+- `oblig4/` — Feedback control and simulation
 
-The final simulated robot movement produced a circular trajectory, but the motion was somewhat uneven. This highlighted the importance of controller tuning, trajectory interpretation and simulation-based validation in robotics.
+Each assignment folder contains:
+- `Taskdescription.pdf` — The assignment brief
+- `README.md` — Reflections on the work
+- `media/` — Supporting images and demonstrations
+- The submitted report and any associated source files
 
-## Repository Structure
+## Running the Code
 
-```text
-robotic-manipulator-control/
-├── oblig1/              # Coordinate frames, forward and inverse kinematics
-├── oblig2/              # Python implementation of kinematics and Jacobian
-├── oblig3/              # Lagrangian formulation and dynamic model
-├── oblig4/              # PD/PID control, ROS/Gazebo simulation and trajectory planning
-└── README.md
+This repository is a coursework archive rather than a single runnable application.
+
+### Mathematical and Python Assignments
+
+Assignments 1–3 contain reports and, where applicable, Python scripts. Inspect each script for its imports, inputs and execution requirements before running it.
+
+A complete dependency list and tested execution procedure have not yet been documented.
+
+### ROS/Gazebo Simulation
+
+Assignment 4 was developed for the University of Oslo IFI ROS environment using the course container and CrustCrawler packages.
+
+The original setup instructions are included in [Assignment 4's task description](oblig4/Taskdescription.pdf). They depend on course-specific resources and are not a verified installation guide for another machine.
+
+The exact ROS distribution and Gazebo version have not yet been confirmed.
+
+## Limitations
+
+The original submissions contain calculation errors, implementation issues and incomplete work. Assignment-specific reflections provide further context.
+
+Areas for improvement include:
+- More comprehensive kinematics tests
+- Handling of unreachable targets and duplicate solutions
+- Verification of the three-link dynamics implementation
+- More systematic controller tuning and response measurements
+- Recovery or reimplementation of the final trajectory generator
+- Documentation of a reproducible simulation environment
+
+## What I Learned
+
+The assignments connected analytical robot modelling with programming and simulation.
+
+Key learning outcomes included:
+- Defining coordinate frames and applying the DH convention
+- Translating kinematic expressions into Python
+- Understanding Jacobians and singular configurations
+- Building energy-based dynamic models
+- Implementing and comparing feedback controllers
+- Interpreting simulation responses and recognising model limitations
+- Identifying the need for better testing and verification
