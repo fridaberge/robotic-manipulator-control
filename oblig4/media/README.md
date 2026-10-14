@@ -1,9 +1,32 @@
-### Screenshots of graphs and simulation
+# Assignment 4 — Media
 
-- PI.png shows a grapth og values and settelingtime
-- best_set.png shows the grapth of settelingtime with tuned values
-- bilde1.png shows that I successfully opened an rqt_grapth
-- bilde2.png shows that I successfully opened Gazebo
-- graf.png shows the grapth for settelingtime for tuned values with PD control 
-- rot1.png and rot2.png shows the robot rotating around it's own axis (here i misunderstood the assignment)
-- tegning.jpg , tegning2.jpg and tegning3.jpg shows control systems in block diagrams
+Screenshots and diagrams documenting the control experiments and ROS/Gazebo simulation work in Assignment 4.
+
+## Controller Responses
+
+- `PI.png` — Response plot from the PI-control experiment.
+- `best_set.png` — Response plot for the tuned settings described in the report.
+- `graf.png` — Response plot from the PD-control experiment.
+
+These plots support the discussion of tuning and settling time. The measurements and parameter choices in the report require further verification.
+
+## Simulation Setup
+
+- `bilde1.png` — Screenshot documenting the launch of the rqt graph interface.
+- `bilde2.png` — Screenshot documenting the Gazebo simulation setup.
+
+## Circular-Motion Attempt
+
+- `rot1.png` and `rot2.png` — Screenshots of the robot rotating around its base axis.
+
+This motion resulted from a misunderstanding of the final task. It differs from the requested trajectory generator for drawing a circle with the end-effector.
+
+## Control-System Diagrams
+
+- `tegning.jpg`
+- `tegning2.jpg`
+- `tegning3.jpg`
+
+These drawings show the control-system block diagrams developed during the assignment. Consult the report for the explanation of each diagram.
+
+[Back to Assignment 4](../README.md)
