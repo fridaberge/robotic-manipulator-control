@@ -29,10 +29,14 @@ This motion resulted from a misunderstanding of the final task. It differs from 
 
 These drawings show the control-system block diagrams developed during the assignment. Consult the report for the explanation of each diagram.
 
-## Physical Robot Demonstration
+## Video Demonstrations
 
-Video of the physical CrustCrawler drawing a circular trajectory with a marker during the coursework.
+- [circle_drawing.mp4](circle_drawing.mp4) — Physical CrustCrawler drawing a circle with a marker.
+- [circle_motion.mp4](circle_motion.mp4) — Additional footage of the robot's circular movement.
+- [circle_gazebo.mp4](circle_gazebo.mp4) — Circular-motion demonstration in Gazebo.
 
-The movement was somewhat uneven, but the demonstration shows the intended drawing motion. The source code used for this attempt has not yet been located, so the demonstration is not currently reproducible from this repository.
+The physical robot videos document an optional practical exercise completed with substantial guidance and assistance. They are included to show the hands-on learning experience, not to claim an independently developed trajectory-planning implementation.
+
+The source code associated with the physical drawing demonstration is not currently included in this repository.
 
 [Back to Assignment 4](../README.md)
