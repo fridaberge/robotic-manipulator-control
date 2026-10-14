@@ -29,4 +29,10 @@ This motion resulted from a misunderstanding of the final task. It differs from 
 
 These drawings show the control-system block diagrams developed during the assignment. Consult the report for the explanation of each diagram.
 
+## Physical Robot Demonstration
+
+Video of the physical CrustCrawler drawing a circular trajectory with a marker during the coursework.
+
+The movement was somewhat uneven, but the demonstration shows the intended drawing motion. The source code used for this attempt has not yet been located, so the demonstration is not currently reproducible from this repository.
+
 [Back to Assignment 4](../README.md)
