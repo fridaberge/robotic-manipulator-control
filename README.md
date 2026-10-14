@@ -7,7 +7,7 @@ The project focuses on modelling and controlling a 3DOF CrustCrawler robotic man
 ## Technologies
 
 - Python
-- ROS 1
+- ROS
 - Gazebo
 - LaTeX
 - PID control
