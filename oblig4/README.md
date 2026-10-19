@@ -96,7 +96,7 @@ The circular-motion task highlighted the importance of clarifying the intended t
 
 The simulation gains differed from those calculated in the analytical section, and the PI tuning calculations require further review. The reported response measurements should therefore be treated as exploratory coursework results.
 
-Source code for the base-axis circular-motion attempt and the optional physical drawing demonstration has not yet been located. The videos document observed movement but do not make these demonstrations reproducible from the repository.
+Both the base-axis circular-motion attempt and the physical drawing exercise were part of a voluntary task. These attempts are documented through descriptions and videos, but their source code is not included in the repository. The videos show the observed movement but do not make the demonstrations reproducible from the repository.
 
 Further improvements would include:
 - Checking model parameters and units
