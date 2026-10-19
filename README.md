@@ -6,16 +6,6 @@ This repository contains four individual assignments completed in **IN3140 – I
 
 The work combines mathematical derivations, Python implementations and ROS/Gazebo simulation. An optional practical exercise also provided experience with a physical CrustCrawler robot.
 
-## Demonstration
-
-As an optional extension to the coursework, I participated in a guided practical exercise exploring circular drawing with the physical CrustCrawler.
-
-- [Physical robot — circular drawing attempt](oblig4/media/circle_drawing.mp4): The robot performs the circular movement but does not reach the paper because the base-frame height was not accounted for.
-- [Physical robot — excessive downward movement](oblig4/media/circle_motion.mp4): The arm moves too far down and makes forceful contact with the table, illustrating a problem with the vertical positioning.
-- [Gazebo simulation](oblig4/media/circle_gazebo.mp4): Circular-motion footage from the simulation environment.
-
-The physical exercise involved substantial guidance and assistance and was separate from the mandatory submissions. These recordings document exploratory attempts and positioning issues, rather than a successfully validated drawing implementation.
-
 ## Technologies and Methods
 
 - Python and SymPy
@@ -26,6 +16,16 @@ The physical exercise involved substantial guidance and assistance and was separ
 - Jacobian and singularity analysis
 - Euler–Lagrange dynamics
 - PD, PI and PID control
+
+## Demonstration
+
+As an optional extension to the coursework, I participated in a guided practical exercise exploring circular drawing with the physical CrustCrawler.
+
+- [Physical robot — circular drawing attempt](oblig4/media/circle_drawing.mp4): The robot performs the circular movement but does not reach the paper because the base-frame height was not accounted for.
+- [Physical robot — excessive downward movement](oblig4/media/circle_motion.mp4): The arm moves too far down and makes forceful contact with the table, illustrating a problem with the vertical positioning.
+- [Gazebo simulation](oblig4/media/circle_gazebo.mp4): Circular-motion footage from the simulation environment.
+
+The physical exercise involved substantial guidance and assistance and was separate from the mandatory submissions. These recordings document exploratory attempts and positioning issues, rather than a successfully validated drawing implementation.
 
 ## Assignment Overview
 
