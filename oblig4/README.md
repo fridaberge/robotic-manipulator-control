@@ -1,17 +1,19 @@
 # Assignment 4 — Feedback Control and ROS/Gazebo Simulation
 
-Individual coursework completed for **IN3140 – Introduction to Robotics** at the University of Oslo, spring 2024.
+Individual coursework completed for **IN3140 – Introduction to Robotics** at the **University of Oslo, spring 2024**.
 
 This assignment investigates feedback control of the CrustCrawler manipulator, focusing on Joint 2 and using the provided ROS/Gazebo simulation environment.
 
+This folder also documents a separate optional practical exercise involving circular drawing with the physical robot.
+
 ## Objectives
 
-- Develop a simplified single-joint model.
-- Analyse the control system in the Laplace domain.
-- Construct closed-loop block diagrams.
-- Implement and tune feedback controllers.
-- Inspect step responses and steady-state error.
-- Explore circular robot motion.
+- Develop a simplified single-joint model
+- Analyse the control system in the Laplace domain
+- Construct closed-loop block diagrams
+- Implement and tune feedback controllers
+- Inspect step responses and steady-state error
+- Investigate trajectory generation for circular motion
 
 ## Work Completed
 
@@ -37,67 +39,75 @@ Implemented a PD controller in the provided starter code and investigated its re
 
 Experimented with proportional and derivative gains and discussed settling time and steady-state error.
 
-The gains used in the simulation differed from those calculated in the analytical section. These results therefore require further review before making quantitative performance claims.
-
 ### PID and PI Control
 
 Implemented a PID option to account for accumulated error.
 
 Also implemented a PI controller and investigated experimental tuning using the method described in the assignment.
 
-The report documents the tuning attempts, but the calculations and controller-parameter choices need further verification.
-
 ### Circular-Motion Attempt
 
 The final task asked for a trajectory generator that would make the robot draw a circle with a marker.
 
-I interpreted this differently and modified the simulation configuration to allow the robot to rotate around its base axis. With an adjusted arm position, this produced circular motion around the robot.
+My submitted approach instead modified the simulation configuration to allow rotation around the robot's base axis. With an adjusted arm position, this produced circular motion around the robot.
 
-This was not the intended Cartesian drawing trajectory and did not constitute a completed implementation of the requested trajectory generator.
-
-The source code for this final attempt has not yet been located. The approach is described in the report.
+This differed from the intended Cartesian drawing trajectory and did not constitute a completed implementation of the requested trajectory generator.
 
 ### Optional Extension — Drawing with the Physical Robot
 
-After the mandatory work, I participated in an optional practical exercise using the physical CrustCrawler to draw a circle with a marker.
+I also participated in an optional practical exercise where the physical CrustCrawler drew a circle with a marker.
 
-The exercise involved substantial guidance and assistance. It provided hands-on experience with executing a drawing trajectory on the robot, but should not be interpreted as an independently implemented solution to the mandatory trajectory-planning task.
+This exercise involved substantial guidance and assistance and provided hands-on experience with executing a drawing trajectory on the robot. It was separate from the mandatory submission and is not presented as an independently developed trajectory-planning implementation.
 
-Videos are available in the [media folder](media/). The source code associated with this demonstration has not yet been located and is not included in the repository.
+- [Drawing demonstration](media/circle_drawing.mp4)
+- [Additional robot footage](media/circle_motion.mp4)
+
+Additional simulation footage is available in the [media folder](media/).
 
 ## Files and Media
 
 - [Taskdescription.pdf](Taskdescription.pdf) — Assignment brief and original setup instructions
 - [IN3140_oblig4_fridatbe.pdf](IN3140_oblig4_fridatbe.pdf) — Submitted report
 - Controller source files — Implementations based on the provided starter code
-- [media/](media/) — Plots, simulation images and demonstrations
+- [media/](media/) — Controller plots, simulation screenshots, block diagrams and video demonstrations
 
-## Contribution
+## Contribution and Assistance
 
-The assignment was completed individually using provided starter code and course simulation packages.
+The mandatory assignment was completed as an individual submission using provided starter code and course simulation packages.
 
-My work included modelling, control analysis, controller implementation, tuning experiments and written documentation.
+My work included:
+- Mathematical modelling and control analysis
+- Controller implementation
+- Simulation and tuning experiments
+- Interpretation of response plots
+- Written documentation
+
+The optional physical-robot drawing exercise involved substantial guidance and assistance. It is documented separately from the individual mandatory work.
 
 ## Reflection
 
-This assignment connected the theoretical control calculations with observable robot behaviour in simulation.
+This assignment connected theoretical control calculations with observable robot behaviour in simulation.
 
 The main challenges were selecting an appropriate model, choosing controller gains and interpreting the resulting responses.
 
-The circular-motion task also demonstrated the importance of clarifying the intended trajectory before implementing a solution.
+The circular-motion task highlighted the importance of clarifying the intended trajectory before implementing a solution. The optional drawing exercise provided additional experience with the physical robot and the practical execution of a drawing movement.
 
 ## Limitations and Improvements
 
-The submitted controllers and measurements are retained as coursework, not as validated control software.
+The simulation gains differed from those calculated in the analytical section, and the PI tuning calculations require further review. The reported response measurements should therefore be treated as exploratory coursework results.
+
+Source code for the base-axis circular-motion attempt and the optional physical drawing demonstration has not yet been located. The videos document observed movement but do not make these demonstrations reproducible from the repository.
 
 Further improvements would include:
-- Reviewing the model parameters and their units
-- Reconciling calculated gains with those used in simulation
-- Measuring response characteristics more systematically
-- Verifying the PI tuning calculations
-- Comparing PD, PI and PID under consistent test conditions
-- Recovering or reimplementing the intended trajectory generator
+- Checking model parameters and units
+- Reconciling analytical gains with simulation settings
+- Verifying PI tuning calculations
+- Measuring settling time and steady-state error consistently
+- Comparing PD, PI and PID under the same test conditions
+- Recovering missing code and documenting the trajectory implementation
 - Documenting a reproducible simulation setup
+
+The submitted controllers are retained as coursework and should not be treated as validated software for physical robot control.
 
 ## Running the Simulation
 
@@ -106,7 +116,5 @@ The original setup depends on the course's ROS 1 environment, CrustCrawler packa
 See [Taskdescription.pdf](Taskdescription.pdf) for the original workspace and launch instructions.
 
 Those instructions refer to course-specific resources and an older environment. They have not been verified as a working installation procedure outside the IFI setup.
-
-The exact ROS distribution and Gazebo version have not yet been confirmed.
 
 [Back to project overview](../README.md)
