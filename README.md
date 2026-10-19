@@ -86,7 +86,7 @@ The work included:
 - PID implementation as a possible improvement
 - PI implementation and experimental tuning
 
-For the final trajectory task, my submitted approach explored base-axis circular motion rather than completing the requested Cartesian drawing trajectory. A separate, assisted optional exercise demonstrated drawing with the physical robot.
+For the final trajectory task, my submitted approach explored base-axis circular motion rather than completing the requested Cartesian drawing trajectory. A separate, assisted optional exercise explored circular drawing with the physical robot and highlighted vertical-positioning issues.
 
 [Assignment files and reflection](oblig4/README.md) · [Task description](oblig4/Taskdescription.pdf) · [Media and videos](oblig4/media/)
 
