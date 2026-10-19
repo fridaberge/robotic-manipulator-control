@@ -1,5 +1,5 @@
 import numpy as np
-from task3a import jacobian
+from IN3140_task3a_fridtbe import jacobian
 
 joint_angles_test = [-90, -30, 45]
 joint_velocities_test = [0.1, 0.05, 0.05]
