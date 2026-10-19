@@ -6,6 +6,21 @@ This repository contains four individual assignments completed in **IN3140 – I
 
 The work combines mathematical derivations, Python implementations and ROS/Gazebo simulation. An optional practical exercise also provided experience with a physical CrustCrawler robot.
 
+## Contents
+
+- [Demonstration](#demonstration)
+- [Technologies and Methods](#technologies-and-methods)
+- [Assignment Overview](#assignment-overview)
+  - [Assignment 1 — Coordinate Transformations and Kinematics](#assignment-1--coordinate-transformations-and-kinematics)
+  - [Assignment 2 — Python Implementation and Jacobian Analysis](#assignment-2--python-implementation-and-jacobian-analysis)
+  - [Assignment 3 — Dynamic Modelling](#assignment-3--dynamic-modelling)
+  - [Assignment 4 — Feedback Control and ROS/Gazebo Simulation](#assignment-4--feedback-control-and-rosgazebo-simulation)
+- [My Contribution](#my-contribution)
+- [Repository Guide](#repository-guide)
+- [Running the Code](#running-the-code)
+- [Limitations and Further Work](#limitations-and-further-work)
+- [What I Learned](#what-i-learned)
+
 ## Technologies and Methods
 
 - Python and SymPy
