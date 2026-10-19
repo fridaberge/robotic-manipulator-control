@@ -4,12 +4,19 @@ Robotics coursework covering coordinate transformations, kinematics, dynamic mod
 
 This repository contains four individual assignments completed in **IN3140 – Introduction to Robotics** at the **University of Oslo in spring 2024**.
 
-The work combines mathematical derivations, Python implementations and ROS/Gazebo simulation. The coursework also included experience with a physical CrustCrawler robot.
+The work combines mathematical derivations, Python implementations and ROS/Gazebo simulation. An optional practical exercise also provided experience with a physical CrustCrawler robot.
+
+## Demonstration
+
+As an optional extension to the coursework, I participated in a guided practical exercise where the physical CrustCrawler drew a circle with a marker.
+
+[Watch the drawing demonstration](oblig4/media/circle_drawing.mp4) · [Additional robot footage](oblig4/media/circle_motion.mp4)
+
+The exercise involved substantial guidance and assistance. It is included as hands-on learning experience, separate from the mandatory assignment submissions.
 
 ## Technologies and Methods
 
-- Python
-- SymPy
+- Python and SymPy
 - ROS 1 and Gazebo
 - LaTeX
 - Denavit–Hartenberg modelling
@@ -32,9 +39,9 @@ The work included:
 - Analytical inverse kinematics
 - Discussion of alternative joint configurations
 
-The original submission contains errors in the inverse-kinematics derivation and discussion of solution counts. These are acknowledged in the assignment README, and the inverse-kinematics work was revised in Assignment 2.
+The inverse-kinematics work was revised in Assignment 2. See the assignment README for reflections and known limitations.
 
-[Assignment files and reflection](oblig1/) · [Task description](oblig1/Taskdescription.pdf) · [Media](oblig1/media/)
+[Assignment files and reflection](oblig1/README.md) · [Task description](oblig1/Taskdescription.pdf) · [Media](oblig1/media/)
 
 ### Assignment 2 — Python Implementation and Jacobian Analysis
 
@@ -48,9 +55,7 @@ The work included:
 - Analysis and illustration of singular configurations
 - A function mapping joint velocities to Cartesian end-effector velocity
 
-The reflection identifies opportunities for more extensive edge-case testing and better handling of positions with fewer distinct inverse-kinematics solutions.
-
-[Assignment files and reflection](oblig2/) · [Task description](oblig2/Taskdescription.pdf) · [Media](oblig2/media/)
+[Assignment files and reflection](oblig2/README.md) · [Task description](oblig2/Taskdescription.pdf) · [Media](oblig2/media/)
 
 ### Assignment 3 — Dynamic Modelling
 
@@ -64,9 +69,7 @@ The work included:
 - Implementation work on inertia, Coriolis/centrifugal and gravitational terms
 - Assembly of the joint-torque expression
 
-The submitted three-link implementation is retained as coursework and should not be treated as a validated dynamics model.
-
-[Assignment files and reflection](oblig3/) · [Task description](oblig3/Taskdescription.pdf) · [Media](oblig3/media/)
+[Assignment files and reflection](oblig3/README.md) · [Task description](oblig3/Taskdescription.pdf) · [Media](oblig3/media/)
 
 ### Assignment 4 — Feedback Control and ROS/Gazebo Simulation
 
@@ -81,31 +84,34 @@ The work included:
 - PID implementation as a possible improvement
 - PI implementation and experimental tuning
 
-The final task asked for a ROS trajectory generator that would make the robot draw a circle. My submitted approach instead modified the simulation configuration to allow rotation around the robot's base axis. This produced circular motion but did not implement the intended Cartesian drawing trajectory.
+For the final trajectory task, my submitted approach explored base-axis circular motion rather than completing the requested Cartesian drawing trajectory. A separate, assisted optional exercise demonstrated drawing with the physical robot.
 
-The source code for the final circular-motion attempt has not yet been located. The report documents the approach taken.
-
-[Assignment files and reflection](oblig4/) · [Task description](oblig4/Taskdescription.pdf) · [Media](oblig4/media/)
+[Assignment files and reflection](oblig4/README.md) · [Task description](oblig4/Taskdescription.pdf) · [Media and videos](oblig4/media/)
 
 ## My Contribution
 
-All four assignments were completed individually.
+The four mandatory assignments were individual submissions. My work included mathematical derivations, Python programming, written reports, controller implementation and simulation experiments.
 
-My work included mathematical derivations, Python programming, written reports, controller implementation and simulation experiments.
-
-The control assignment used provided starter code and course simulation packages. As documented in the Assignment 2 reflection, I received a corrected inverse-kinematics expression from a fellow student and implemented it in Python.
+The work also involved the following resources and assistance:
+- Provided starter code and course simulation packages for Assignment 4
+- A corrected inverse-kinematics expression received from a fellow student and implemented in Python, as documented in the Assignment 2 reflection
+- Substantial guidance and assistance during the separate optional physical-robot drawing exercise
 
 ## Repository Guide
 
-- `oblig1/` — Coordinate transformations and analytical kinematics
-- `oblig2/` — Python kinematics, Jacobian and singularity analysis
-- `oblig3/` — Dynamic modelling and symbolic calculations
-- `oblig4/` — Feedback control and simulation
+```text
+robotic-manipulator-control/
+├── oblig1/    # Coordinate transformations and analytical kinematics
+├── oblig2/    # Python kinematics, Jacobian and singularity analysis
+├── oblig3/    # Dynamic modelling and symbolic calculations
+├── oblig4/    # Feedback control, simulation and demonstration videos
+└── README.md
+```
 
 Each assignment folder contains:
 - `Taskdescription.pdf` — The assignment brief
-- `README.md` — Reflections on the work
-- `media/` — Supporting images and demonstrations
+- `README.md` — An overview and reflection on the work
+- `media/` — Supporting images or demonstrations
 - The submitted report and any associated source files
 
 ## Running the Code
@@ -116,27 +122,27 @@ This repository is a coursework archive rather than a single runnable applicatio
 
 Assignments 1–3 contain reports and, where applicable, Python scripts. Inspect each script for its imports, inputs and execution requirements before running it.
 
-A complete dependency list and tested execution procedure have not yet been documented.
-
 ### ROS/Gazebo Simulation
 
 Assignment 4 was developed for the University of Oslo IFI ROS environment using the course container and CrustCrawler packages.
 
-The original setup instructions are included in [Assignment 4's task description](oblig4/Taskdescription.pdf). They depend on course-specific resources and are not a verified installation guide for another machine.
+The original setup instructions are included in [Assignment 4's task description](oblig4/Taskdescription.pdf). They depend on course-specific resources and have not been verified as an installation procedure for another machine.
 
 The exact ROS distribution and Gazebo version have not yet been confirmed.
 
-## Limitations
+## Limitations and Further Work
 
-The original submissions contain calculation errors, implementation issues and incomplete work. Assignment-specific reflections provide further context.
+This repository preserves the original coursework submissions rather than a fully validated robotics application. Assignment-specific READMEs document known issues, assistance received and reflections.
 
-Areas for improvement include:
-- More comprehensive kinematics tests
-- Handling of unreachable targets and duplicate solutions
-- Verification of the three-link dynamics implementation
-- More systematic controller tuning and response measurements
-- Recovery or reimplementation of the final trajectory generator
-- Documentation of a reproducible simulation environment
+Key areas for further work:
+- Correcting remaining analytical errors and expanding kinematics tests
+- Handling unreachable targets and duplicate inverse-kinematics solutions
+- Verifying the three-link dynamics implementation
+- Reconciling calculated controller gains with simulation settings
+- Recovering the missing circular-motion and drawing-demonstration code
+- Documenting a reproducible execution and simulation environment
+
+The dynamics and controller implementations should not be treated as validated software for physical robot control.
 
 ## What I Learned
 
@@ -149,4 +155,5 @@ Key learning outcomes included:
 - Building energy-based dynamic models
 - Implementing and comparing feedback controllers
 - Interpreting simulation responses and recognising model limitations
-- Identifying the need for better testing and verification
+- Connecting simulation work with physical robot behaviour
+- Identifying the need for better testing, verification and reproducibility
