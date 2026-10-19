@@ -1,5 +1,5 @@
 import numpy as np
-from task1b import inverse
+from IN3140_task1b_fridatbe import inverse
 
 #konstants
 d1 = 100.9
