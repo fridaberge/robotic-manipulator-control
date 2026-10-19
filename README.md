@@ -8,8 +8,6 @@ The work combines mathematical derivations, Python implementations and ROS/Gazeb
 
 ## Demonstration
 
-## Demonstration
-
 As an optional extension to the coursework, I participated in a guided practical exercise exploring circular drawing with the physical CrustCrawler.
 
 - [Physical robot — circular drawing attempt](oblig4/media/circle_drawing.mp4): The robot performs the circular movement but does not reach the paper because the base-frame height was not accounted for.
